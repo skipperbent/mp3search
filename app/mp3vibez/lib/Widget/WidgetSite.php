@@ -1,5 +1,9 @@
 <?php
 namespace mp3vibez\Widget;
+use mp3vibez\Helper;
+use Pecee\Cookie;
+use Pecee\Language;
+use Pecee\Locale;
 use Pecee\Widget\Widget;
 
 class WidgetSite extends Widget {
@@ -10,6 +14,11 @@ class WidgetSite extends Widget {
 	protected $userMenu=null;
 
 	public function __construct() {
+
+		if(Cookie::get('Locale') && in_array(strtolower(Cookie::get('Locale')), Helper::$Locales)) {
+			Locale::getInstance()->setLocale(Cookie::get('Locale'));
+		}
+
 		parent::__construct();
 
 		$this->getSite()->addWrappedCss('style.css');
@@ -18,10 +27,6 @@ class WidgetSite extends Widget {
 		$this->getSite()->setTitle('mp3vibez.com');
 
 		$this->globalMenu = new \Pecee\UI\Menu\Menu();
-		$this->globalMenu->addItem(lang('Søg'), '#'. url())->addClass('active');
-
-		if(\Pecee\Cookie::Get('Locale') && in_array(strtolower(\Pecee\Cookie::Get('Locale')), Helper::$Locales)) {
-			\Pecee\Locale::Instance()->setLocale(\Pecee\Cookie::Get('Locale'));
-		}
+		$this->globalMenu->addItem(lang('Search/Search'), '#'. url())->addClass('active');
 	}
 }

@@ -3,9 +3,9 @@
 	<tr>
 		<td class="col1 search-options">
 			<? if($this->artists): ?>
-			<h4><?= lang('Kunstnere')?></h4>
+			<h4><?= lang('Search/Artists')?></h4>
 			<ul class="margin-bottom">
-				<li<?= (!$this->artist) ? ' class="active"' : '' ?>><a href="#<?= url('music', 'search', array('search_query' => $this->query))?>"><?= lang('Alle')?></a></li>
+				<li<?= (!$this->artist) ? ' class="active"' : '' ?>><a href="#<?= url('music', 'search', array('search_query' => $this->query))?>"><?= lang('Search/All')?></a></li>
 				<? foreach($this->artists as $artist) : ?>
 				<? if(strip_tags($artist)):?>
 				<li<?= ($this->artist == $artist) ? ' class="active"' : '' ?>><a href="#<?= url('music', 'search', array('search_query' => $this->query, 'artist' => urlencode($artist)))?>"><?= ucwords($artist); ?></a></li>
@@ -13,20 +13,6 @@
 				<? endforeach; ?>
 			</ul>
 			<? endif; ?>
-			<? /*<h4><?= lang('Kvalitet')?></h4>
-			<ul class="margin-bottom">
-				<li><b><?= lang('Alle')?></b></li>
-				<li><?= lang('Lav')?></li>
-				<li><?= lang('Mellem')?></li>
-				<li><?= lang('Høj')?></li>
-				<li><?= lang('Fremragende')?></li>
-			</ul>
-			<h4><?= lang('Længde')?></h4>
-			<ul>
-				<li><b><?= lang('Alle')?></b></li>
-				<li>&gt; 1 min.</li>
-				<li>&gt; 3 min.</li>
-			</ul> */ ?>
 		</td>
 		<td class="col2">
 			<?= $this->snippet('Searchbar.php')?>
@@ -41,16 +27,16 @@
 			<div class="results-container">
 				<? if(!$this->results): ?>
 				<div class="xmargin-top padding">
-					<h4><?= lang('Ingen resultater')?>.</h4>
+					<h4><?= lang('Search/NoResults')?>.</h4>
 					<p>
-						<?= lang('Vi kunne desværre ikke finde det du ledte efter.')?>
+						<?= lang('Search/NoResultsDescription')?>
 					</p>
 					<div class="xmargin-top" style="font-size:13px;font-weight:bold;">
-						<?= lang('Prøv følgende')?>:
+						<?= lang('Search/TryTheFollowing')?>
 					</div>
 					<ul class="list">
-						<li><?= lang('Gør søgningen mindre præcis, for eksempel ved at undlade kunstner')?>.</li>
-						<li><?= lang('Forsøg med alternative søgeord')?>.</li>
+						<li><?= lang('Search/SearchTip1')?>.</li>
+						<li><?= lang('Search/SearchTip2')?>.</li>
 					</ul>
 				</div>
 				<? else: ?>
@@ -59,10 +45,10 @@
 						<thead>
 							<tr>
 								<th style="width:20px;"></th>
-								<th><?= lang('Titel')?></th>
-								<th style="text-align:center;width:50px;"><?= lang('Længde'); ?></th>
-								<th style="text-align:center;width:50px;"><?= lang('Bitrate'); ?></th>
-								<th style="text-align:center;"><?= lang('Størrelse')?></th>
+								<th><?= lang('Search/Title'); ?></th>
+								<th style="text-align:center;width:50px;"><?= lang('Search/Duration'); ?></th>
+								<th style="text-align:center;width:50px;"><?= lang('Search/Bitrate'); ?></th>
+								<th style="text-align:center;"><?= lang('Search/Size')?></th>
 								<th></th>
 							</tr>
 						</thead>
@@ -74,7 +60,7 @@
 									<a href="#<?= $result->url; ?>" class="js-play icon play" rel="<?= addslashes($result->title); ?>"></a>
 								</td>
 								<td>
-									<?= ($result->title) ? $result->title : lang('Ingen titel'); ?>
+									<?= ($result->title) ? $result->title : lang('Search/NoTitle'); ?>
 								</td>
 								<td align="center">
 									<?= $result->length; ?>
@@ -89,10 +75,10 @@
 									<div style="position:relative;height:16px;width:16px;">
 										<a href="#" class="icon options js-options-menu"></a>
 										<ul class="options-menu">
-											<li><a href="javascript:void(0);" onclick="return player.playlist.add('<?= addslashes($result->title); ?>', '<?= $result->id; ?>', true);" class="js-playlist"><?= lang('Afspil efter nuværende')?></a></li>
-											<li><a href="javascript:void(0);" onclick="return player.playlist.add('<?= addslashes($result->title); ?>', '<?= $result->id; ?>');" class="js-playlist"><?= lang('Tilføj til afspilningsliste')?></a></li>
-											<li><a href="<?= $result->url;?>" target="_blank" rel="new"><?= lang('Hent')?></a></li>
-											<li><a href="<?= url('dialog',['share'], array('song' => $result->url))?>" title="<?= lang('Del med dine venner')?>" rel="dialog"><?= lang('Del')?></a></li>
+											<li><a href="javascript:void(0);" onclick="return player.playlist.add('<?= addslashes($result->title); ?>', '<?= $result->id; ?>', true);" class="js-playlist"><?= lang('Options/PlayAfter')?></a></li>
+											<li><a href="javascript:void(0);" onclick="return player.playlist.add('<?= addslashes($result->title); ?>', '<?= $result->id; ?>');" class="js-playlist"><?= lang('Options/PlaylistAdd')?></a></li>
+											<li><a href="<?= $result->url;?>" target="_blank" rel="new"><?= lang('Download')?></a></li>
+											<li><a href="<?= url('dialog',['share'], array('song' => $result->url))?>" title="<?= lang('Share')?>" rel="dialog"><?= lang('Share')?></a></li>
 										</ul>
 									</div>
 								</td>

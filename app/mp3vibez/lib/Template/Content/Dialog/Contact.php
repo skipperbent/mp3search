@@ -2,8 +2,8 @@
 <div class="content">
 	<p>
 		<span class="bold">
-			<?= lang('Du kan skrive til os hvis du har spørgsmål, kommentarer, ris eller ros på følgende adresse')?>:
+			<?= lang('Contact/Text')?>:
 		</span><br/>
-		ss@pecee.dk
+		https://github.com/skipperbent/mp3vibez/issues
 	</p>
 </div>

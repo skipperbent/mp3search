@@ -6,22 +6,22 @@
 			global.init(function() {
 				var s = global.settings;
 				s.SITE.SHARE_URL = 'http://<?= $_SERVER['HTTP_HOST'] ?>/#<?= url('song', null, array('song' => '')); ?>';
-				s.TEXT.LOADING = '<?= lang('Arbejder, vent venligst...'); ?>';
-				s.TEXT.DOWNLOAD = '<?= lang('Hent');?>';
-				s.TEXT.SHARE = '<?= lang('Del'); ?>';
-				s.TEXT.SHARE_TITLE = '<?= lang('Del med dine venner'); ?>';
-				s.TEXT.PLAYLIST_SEARCH_NO_RESULTS = '<?= lang('Ingen resultater fundet.'); ?>';
-				s.TEXT.PLAYLIST_NO_SONGS = '<?= lang('Du har endnu ikke tilføjet nogle sange til din afspilningsliste') ?>';
-				s.TEXT.PLAY_ERROR = '<?= lang('Fejl: sangen kan ikke afspilles i øjeblikket.'); ?>';
-				s.TEXT.OPTIONS_PLAY = '<?= lang('Afspil nu'); ?>';
-				s.TEXT.OPTIONS_PLAY_AFTER = '<?= lang('Afspil efter nuværende'); ?>';
-				s.TEXT.OPTIONS_PLAYLIST_ADD = '<?= lang('Tilføj til afspilningsliste'); ?>';
-				s.TEXT.DIALOG_NOW_PLAYING = '<?= lang('Nu afspilles') ?>:';
-				s.TEXT.DIALOG_PLAY_NEXT = '<?= lang('vil blive afspillet efter nuværende') ?>';
-				s.TEXT.DIALOG_PLAYLIST_REMOVE = '<?= lang('er fjernet fra din afspilningsliste')?>';
-				s.TEXT.DIALOG_PLAYLIST_ADD = '<?= lang('er tilføjet til din afspilningsliste')?>';
-				s.TEXT.DIALOG_PLAYLIST_MULTIPLE_ADD = '<?= lang('sange er blevet tilføjet til din afspilningsliste'); ?>';
-				s.TEXT.DIALOG_FLASH_PLAYER = '<?= lang('Flash ikke installeret eller opdatering påkrævet'); ?>';
+				s.TEXT.LOADING = '<?= lang('WorkingPleaseWait'); ?>';
+				s.TEXT.DOWNLOAD = '<?= lang('Download');?>';
+				s.TEXT.SHARE = '<?= lang('Share'); ?>';
+				s.TEXT.SHARE_TITLE = '<?= lang('ShareWithFriends'); ?>';
+				s.TEXT.PLAYLIST_SEARCH_NO_RESULTS = '<?= lang('Playlist/NoResultsFound'); ?>';
+				s.TEXT.PLAYLIST_NO_SONGS = '<?= lang('Playlist/NoSongs') ?>';
+				s.TEXT.PLAY_ERROR = '<?= lang('Play/Error'); ?>';
+				s.TEXT.OPTIONS_PLAY = '<?= lang('Options/Play'); ?>';
+				s.TEXT.OPTIONS_PLAY_AFTER = '<?= lang('Options/PlayAfter'); ?>';
+				s.TEXT.OPTIONS_PLAYLIST_ADD = '<?= lang('Options/PlaylistAdd'); ?>';
+				s.TEXT.DIALOG_NOW_PLAYING = '<?= lang('Dialog/NowPlaying') ?>:';
+				s.TEXT.DIALOG_PLAY_NEXT = '<?= lang('Dialog/PlayNext') ?>';
+				s.TEXT.DIALOG_PLAYLIST_REMOVE = '<?= lang('Dialog/PlaylistRemove')?>';
+				s.TEXT.DIALOG_PLAYLIST_ADD = '<?= lang('Dialog/PlaylistAdd')?>';
+				s.TEXT.DIALOG_PLAYLIST_MULTIPLE_ADD = '<?= lang('Dialog/PlaylistMultipleAdd'); ?>';
+				s.TEXT.DIALOG_FLASH_PLAYER = '<?= lang('Dialog/FlashRequired'); ?>';
 			});
 		</script>
 	</head>
@@ -42,30 +42,29 @@
 	</div>
 	<div id="footer" class="content-container padding">
 		<div class="languages">
-			<?= lang('Sprog')?>:
+			<?= lang('Language')?>:
 			<?= $this->form()->selectStart('language', new mp3vibez\Dataset\DatasetLanguages(), \Pecee\Locale::getInstance()->getLocale());?>
 		</div>
 				<span class="copyright">
 					&copy; <?= date('Y')?> <a href="http://www.pecee.dk" rel="new">Pecee</a>
 				</span>
 		<ul>
-			<li><a href="<?= url('dialog', ['terms'])?>" title="<?= lang('Vilkår for anvendelse');?>" rel="dialog"><?= lang('Vilkår for anvendelse')?></a></li>
-			<li><a href="<?= url('dialog', ['about'])?>" title="<?= lang('Om mp3vibez');?>" rel="dialog"><?= lang('Om')?></a></li>
-			<li class="last"><a href="<?= url('dialog', ['contact'])?>" title="<?= lang('Kontakt');?>" rel="dialog"><?= lang('Kontakt')?></a></li>
+			<li><a href="<?= url('dialog', ['terms'])?>" title="<?= lang('TermsForUsage');?>" rel="dialog"><?= lang('TermsForUsage')?></a></li>
+			<li class="last"><a href="<?= url('dialog', ['contact'])?>" title="<?= lang('Contact/Contact');?>" rel="dialog"><?= lang('Contact/Contact')?></a></li>
 		</ul>
 		<div class="breaker"></div>
 	</div>
 	<div class="player-bar">
 		<div style="position:relative;">
 			<ul class="buttons">
-				<li><a href="#" class="bnt js-playlist"><?= lang('Afspilningsliste')?></a></li>
+				<li><a href="#" class="bnt js-playlist"><?= lang('Playlist/Playlist')?></a></li>
 			</ul>
 			<div class="playlist">
 				<div class="filter">
-					<?= $this->form()->input('playlist-query', 'text', lang('Filtrer efter søgeord...'))->addAttribute('ID', 'song-query')?>
+					<?= $this->form()->input('playlist-query', 'text', lang('Playlist/Filter'))->addAttribute('ID', 'song-query')?>
 				</div>
 				<div class="empty padding">
-					<?= lang('Du har endnu ikke tilføjet nogle sange til din afspilningsliste.')?>
+					<?= lang('Playlist/NoSongs')?>
 				</div>
 				<ul class="songs" id="songs"></ul>
 			</div>

@@ -1,8 +1,5 @@
 <? /* @var $this \mp3vibez\Widget\Dialog\Terms */ ?>
 <div class="content">
-	<div class="error">
-		<?= lang('Denne side er i øjeblikket kun tilgængelig på engelsk')?>.
-	</div>
 	<h5 class="xmargin-top">Overview</h5>
 	<ul class="list padding-bottom">
 		<li><a href="#">1. DESCRIPTION OF SERVICE</a></li>

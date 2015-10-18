@@ -7,6 +7,6 @@ http://mp3.pecee.dk
 ### Installation
 
 ```
-git clone [REPO]
+git clone https://github.com/skipperbent/mp3vibez.git
 composer install
 ```

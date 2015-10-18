@@ -37,8 +37,8 @@
         <NoResults>Ingen resultater</NoResults>
         <NoResultsDescription>Vi kunne desværre ikke finde det du ledte efter.</NoResultsDescription>
         <TryTheFollowing>Prøv følgende:</TryTheFollowing>
-        <SearchTip1>Gør søgningen mindre præcis, for eksempel ved at undlade kunstner</SearchTip1>
-        <SearchTip2>Forsøg med alternative søgeord</SearchTip2>
+        <SearchTip1>Gør søgningen mindre præcis, for eksempel ved at undlade kunstner.</SearchTip1>
+        <SearchTip2>Forsøg med alternative søgeord.</SearchTip2>
         <Title>Titel</Title>
         <Duration>Længde</Duration>
         <Bitrate>Bitrate</Bitrate>

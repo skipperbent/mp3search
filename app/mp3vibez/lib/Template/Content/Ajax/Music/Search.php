@@ -22,8 +22,8 @@
 						<?= lang('Search/TryTheFollowing')?>
 					</div>
 					<ul class="list">
-						<li><?= lang('Search/SearchTip1')?>.</li>
-						<li><?= lang('Search/SearchTip2')?>.</li>
+						<li><?= lang('Search/SearchTip1')?></li>
+						<li><?= lang('Search/SearchTip2')?></li>
 					</ul>
 				</div>
 				<? else: ?>

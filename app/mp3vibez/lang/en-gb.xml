@@ -38,7 +38,7 @@
         <NoResultsDescription>We couldn't find the song you were looking for.</NoResultsDescription>
         <TryTheFollowing>Try the following:</TryTheFollowing>
         <SearchTip1>Make the search more precise by searching by the title only.</SearchTip1>
-        <SearchTip2>Try with alternative search words</SearchTip2>
+        <SearchTip2>Try with alternative search words.</SearchTip2>
         <Title>Title</Title>
         <Duration>Length</Duration>
         <Bitrate>Bitrate</Bitrate>

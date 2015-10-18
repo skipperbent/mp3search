@@ -1,20 +1,7 @@
 <? /* @var $this \mp3vibez\Widget\Ajax\Music\Search */ ?>
 <table class="results">
 	<tr>
-		<td class="col1 search-options">
-			<? if($this->artists): ?>
-			<h4><?= lang('Search/Artists')?></h4>
-			<ul class="margin-bottom">
-				<li<?= (!$this->artist) ? ' class="active"' : '' ?>><a href="#<?= url('music', 'search', array('search_query' => $this->query))?>"><?= lang('Search/All')?></a></li>
-				<? foreach($this->artists as $artist) : ?>
-				<? if(strip_tags($artist)):?>
-				<li<?= ($this->artist == $artist) ? ' class="active"' : '' ?>><a href="#<?= url('music', 'search', array('search_query' => $this->query, 'artist' => urlencode($artist)))?>"><?= ucwords($artist); ?></a></li>
-				<? endif;?>
-				<? endforeach; ?>
-			</ul>
-			<? endif; ?>
-		</td>
-		<td class="col2">
+		<td>
 			<?= $this->snippet('Searchbar.php')?>
 			<? if($this->results):?>
 			<div class="info-bar">
@@ -47,8 +34,8 @@
 								<th style="width:20px;"></th>
 								<th><?= lang('Search/Title'); ?></th>
 								<th style="text-align:center;width:50px;"><?= lang('Search/Duration'); ?></th>
-								<th style="text-align:center;width:50px;"><?= lang('Search/Bitrate'); ?></th>
-								<th style="text-align:center;"><?= lang('Search/Size')?></th>
+								<th style="text-align:center;width:80px;"><?= lang('Search/Bitrate'); ?></th>
+								<th style="text-align:center;width:50px;"><?= lang('Search/Size')?></th>
 								<th></th>
 							</tr>
 						</thead>

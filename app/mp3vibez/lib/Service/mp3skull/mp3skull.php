@@ -34,16 +34,14 @@ class mp3skull {
                         if ($info) {
                             $info = explode("/", strip_tags($info));
 
-                            if (isset($info[0])) {
-                                $result->bitrate = trim($info[0]);
-                            }
-
-                            if (isset($info[1])) {
-                                $result->length = trim($info[1]);
-                            }
-
-                            if (isset($info[2])) {
-                                $result->size = trim($info[2]);
+                            foreach($info as $i) {
+                                if(stripos($i, 'mb') !== false) {
+                                    $result->size = trim($i);
+                                } elseif( stripos($i, 'kbps') !== false ) {
+                                    $result->bitrate = $i;
+                                } else {
+                                    $result->length = $i;
+                                }
                             }
                         }
 

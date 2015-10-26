@@ -279,7 +279,7 @@ $(function() {
 			clearTimeout(timer);
 			timer = null;
 
-			top.location.href='#/'+$(this).attr('action')+'?'+$(this).serialize();
+			top.location.href='#'+$(this).attr('action')+'?'+$(this).serialize();
 			return false;
 		});
 		/* Options menu */

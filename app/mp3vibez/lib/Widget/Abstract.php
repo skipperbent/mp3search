@@ -6,20 +6,20 @@ abstract class Widget_Abstract extends \Pecee\Widget\Widget {
 		parent::__construct();
 
 		// Default configuration
-		$this->getSite()->setTitle('Test site');
+		$this->getSite()->setTitle('mp3vibez');
 		$this->getSite()->addWrappedCss('style.css');
 		$this->getSite()->addWrappedJs('global.js');
 	}
 
-	public function showFlash($formName=NULL) {
-		$o=$this->showMessages('error', $formName);
+	public function showFlash($formName = null) {
+		$o=$this->showMessages($this->errorType, $formName);
 		$o.=$this->showMessages('warning', $formName);
 		$o.=$this->showMessages('info', $formName);
 		$o.=$this->showMessages('success', $formName);
 		return $o;
 	}
 
-	public function showMessages($type, $formName = NULL) {
+	public function showMessages($type, $formName = null) {
 		if(is_null($formName) || is_null($this->getFormName()) || $formName == $this->getFormName()) {
 			if($this->hasMessages($type)) {
 				$iconMap=array('info' => '*', 'warning' => '!', 'error' => 'X', 'success' => '=');
@@ -37,9 +37,9 @@ abstract class Widget_Abstract extends \Pecee\Widget\Widget {
 		return '';
 	}
 
-	protected function validationFor($name) {
-		if($this->form()->validationFor($name)) {
-			return '<span class="msg error">'.$this->form()->validationFor($name).'</span>';
+	public function validationFor($index) {
+		if(parent::validationFor($index)) {
+			return '<span class="msg error">'.parent::validationFor($index).'</span>';
 		}
 		return '';
 	}

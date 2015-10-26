@@ -7,7 +7,7 @@ class WidgetAjax extends WidgetSite {
 
 		parent::__construct();
 
-		$this->setTemplate(NULL);
+		$this->setTemplate(null);
 	}
 
 }

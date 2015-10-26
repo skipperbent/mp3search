@@ -7,6 +7,6 @@ class Share extends WidgetAjax {
 	protected $song;
 	public function __construct() {
 		parent::__construct();
-		$this->song = $this->getParam('song', '');
+		$this->song = $this->input('song', '');
 	}
 }

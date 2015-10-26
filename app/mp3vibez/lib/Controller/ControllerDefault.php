@@ -7,15 +7,15 @@ use Pecee\Cookie;
 
 class ControllerDefault extends \Pecee\Controller\Controller {
 
-	public function getIndex() {
+	public function index() {
 		echo new WidgetHome();
 	}
 
-	public function getLanguage($locale=null) {
+	public function language($locale=null) {
 		if(in_array(strtolower($locale), Helper::$Locales)) {
 			Cookie::create('Locale', strtolower($locale));
 		}
-		$path = $this->getParam('path', '');
+		$path = $this->input('path', '');
 		redirect('/#' . $path);
 	}
 }

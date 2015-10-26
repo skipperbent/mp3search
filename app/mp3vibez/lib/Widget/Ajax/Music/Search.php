@@ -12,11 +12,11 @@ class Search extends WidgetAjax {
 	protected $query;
 	protected $pageIndex=0;
 
-	public function __construct($query = NULL) {
+	public function __construct($query = null) {
 		parent::__construct();
-		$this->query = (!is_null($query)) ? $query : $this->getParam('search_query', '');
-		$this->artist = $this->getParam('artist', NULL);
-		$this->pageIndex = $this->getParam('page', 0);
+		$this->query = (!is_null($query)) ? $query : $this->input('search_query', '');
+		$this->artist = $this->input('artist', null);
+		$this->pageIndex = $this->input('page', 0);
 
 		$service = new mp3skull();
 		$this->results = $service->search($this->query);

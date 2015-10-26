@@ -7,8 +7,8 @@ use Pecee\Str;
 
 class ControllerJson extends \Pecee\Controller\Controller {
 
-	public function getSearch() {
-		$query = $this->getParam('query');
+	public function search() {
+		$query = $this->input('query');
 		if(!empty($query)) {
 			$results = new mp3skull();
 			$results = $results->search($query);

@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+
+global $argv, $appPath;
+
+$appPath = __DIR__;
+require_once 'vendor/pecee/framework/bin/pecee.php';

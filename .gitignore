@@ -1,4 +1,4 @@
 vendor/
 .idea/
 composer.lock
-app/mp3vibez/cache/*
+cache

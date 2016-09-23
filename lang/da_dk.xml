@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Language name="danish" locale="da-DK">
+    <WorkingPleaseWait>Arbejder, vent venligst...</WorkingPleaseWait>
+    <Download>Hent</Download>
+    <Share>Del</Share>
+    <ShareWithFriends>Del med dine venner</ShareWithFriends>
+    <Playlist>
+        <Playlist>Afspilningsliste</Playlist>
+        <Filter>Filtrer efter søgeord...</Filter>
+        <NoResultsFound>Ingen resultater fundet.</NoResultsFound>
+        <NoSongs>Du har endnu ikke tilføjet nogle sange til din afspilningsliste</NoSongs>
+    </Playlist>
+    <Play>
+        <Error>Fejl: sangen kan ikke afspilles i øjeblikket.</Error>
+    </Play>
+    <Options>
+        <Play>Afspil nu</Play>
+        <PlayAfter>Afspil efter nuværende</PlayAfter>
+        <PlaylistAdd>Tilføj til afspilningsliste</PlaylistAdd>
+    </Options>
+    <Dialog>
+        <NowPlaying>Nu afspilles</NowPlaying>
+        <PlayNext>vil blive afspillet efter nuværende</PlayNext>
+        <PlaylistRemove>er fjernet fra din afspilningsliste</PlaylistRemove>
+        <PlaylistAdd>er tilføjet til din afspilningsliste</PlaylistAdd>
+        <PlaylistMultipleAdd>sange er blevet tilføjet til din afspilningsliste</PlaylistMultipleAdd>
+        <FlashRequired>Flash ikke installeret eller opdatering påkrævet</FlashRequired>
+    </Dialog>
+    <Language>Sprog</Language>
+    <TermsForUsage>Vilkår for anvendelse</TermsForUsage>
+    <About>Om</About>
+    <SearchingThroughMillionsOfSongs>Søger blandt millioner af sange.</SearchingThroughMillionsOfSongs>
+    <Search>
+        <Search>Søg</Search>
+        <Artists>Kunstnere</Artists>
+        <All>Alle</All>
+        <NoResults>Ingen resultater</NoResults>
+        <NoResultsDescription>Vi kunne desværre ikke finde det du ledte efter.</NoResultsDescription>
+        <TryTheFollowing>Prøv følgende:</TryTheFollowing>
+        <SearchTip1>Gør søgningen mindre præcis, for eksempel ved at undlade kunstner.</SearchTip1>
+        <SearchTip2>Forsøg med alternative søgeord.</SearchTip2>
+        <Title>Titel</Title>
+        <Duration>Længde</Duration>
+        <Bitrate>Bitrate</Bitrate>
+        <Size>Størrelse</Size>
+        <NoTitle>Ingen titel</NoTitle>
+    </Search>
+    <Contact>
+        <Contact>Kontakt</Contact>
+        <Text>
+            Du kan skrive til os hvis du har spørgsmål, kommentarer, ris eller ros på følgende adresse
+        </Text>
+    </Contact>
+</Language>
